@@ -1,0 +1,14 @@
+.Home__container {
+    margin-left: 290px;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.Home_bannermini{
+    width: 60%;
+    margin: 0 300px;
+    min-width: 500px;
+}
+.Home_storesystem {
+    width: 100%;
+}

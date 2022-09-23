@@ -1,0 +1,77 @@
+.Sidebar__container{
+    width: 290px;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    background-color: #ffffff;
+}
+
+.Sidebar__shopname {
+    font-weight: 900;
+ padding: 25px 0;
+}
+
+.Sidebar__extra{
+    margin: 15px 0;
+}
+
+.Sidebar__extra i {
+    padding: 30px 10px;
+    font-size: 18px;
+}
+
+.Sidebar__navlink{
+    list-style: none;
+    padding: 0;
+    display: grid;
+}
+
+.Content__name {
+    color: black;
+    text-decoration: none;
+}
+
+
+.Nav__links {
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 1px solid #f7f7f7;
+    padding: 15px 20px; 
+    color: black;
+}
+
+.Nav__links:hover {
+    text-decoration: underline;
+    color: #78cccd;
+    background-color: #f7f7f7;
+}
+
+.Sidebar__footer{
+    position: absolute;
+    bottom: 100px;
+}
+
+.Sidebar__hotline {
+    background-color: black;
+    color: #ffffff;
+    margin: 0 50px 15px;
+    padding: 10px ;
+}
+
+.Sidebar__hotline i {
+    margin-right: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+
+.Sidebar__connect i {
+    padding: 7px 8px;
+    color: #7d7d7d;
+}

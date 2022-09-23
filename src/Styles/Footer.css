@@ -1,0 +1,56 @@
+.Footer__container{
+    margin-left: 290px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    margin-top: -5px;
+}
+
+.Footer__infomation{
+    display: grid;
+    grid-template-columns: 25% 25% 14% 18% 18%;
+}
+
+.Footer__infomation h4{
+    margin: 10px 0;
+    font-size: medium;
+}
+
+.Footer__infomation p {
+    font-size: 12px;
+}
+
+.Footer__infomation h5 {
+    font-size: 16px;
+    color: #EF9608 ;
+    margin: 5px 0 ;
+}
+
+.Footer__input {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.Footer__input input{
+    width: 60%;
+    padding: 6px 0;
+    border: 1px solid white;
+}
+
+.Footer__input button{
+    border: 1px solid white;
+    padding: 6px 22px;
+    background-color: black;
+    color: white;
+}
+
+.Footer__copyright {
+    margin: 20px 0;
+    border-top: 1px solid white;
+}
+
+.Footer__copyright p {
+    font-size: 13px;
+    margin-top: 0px;
+}
+
