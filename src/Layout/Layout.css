@@ -1,0 +1,11 @@
+.DefaultLayout {
+    display: flex;
+}
+
+.DefaultLayout__sideBar {
+    width: 290px;
+}
+.DefaultLayout__content {
+    flex: 1;
+    padding: 20px
+}

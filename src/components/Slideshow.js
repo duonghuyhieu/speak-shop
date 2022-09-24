@@ -1,56 +1,32 @@
-import React from 'react'
-import Slide1 from '../assets/Slide1.jpg'
-import Slide2 from '../assets/Slide2.jpg'
-import Slide3 from '../assets/Slide3.jpg'
-import '../Styles/Slideshow.css'
-const slides = [Slide1, Slide2, Slide3];
-const delay = 2000
-function Slideshow() {
-    const [index, setIndex] = React.useState(0);
-    const timeoutRef = React.useRef(null);
+import React, { useEffect, useState } from "react";
+import { Slice } from "../assets";
+import "../Styles/Slideshow.css";
+const slides = [Slice.slice1, Slice.slice2, Slice.slice3];
+const Slideshow = () => {
+  const [index, setIndex] = useState(0);
 
-    function resetTimeout() {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    }
-React.useEffect(() => {
-  resetTimeout();
-  timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-
+  useEffect(() => {
+    const timeInterval = setInterval(() => {
+      setIndex((prev) => {
+        if (prev === slides.length - 1) {
+          return 0;
+        } else {
+          return prev + 1;
+        }
+      });
+    }, 3000);
     return () => {
-      resetTimeout();
+      clearInterval(timeInterval);
     };
-  }, [index]);
+  }, []);
 
+  console.log(index, slides.length - 1);
+  return (
+    <div
+      className="Home__slideWrapper"
+      style={{ backgroundImage: `url(${slides[index]})` }}
+    />
+  );
+};
 
-  
-return (
-    <div className='Home__slidewrapper'>
-        <div className='Home__slide'
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-              {slides.map((img, index) =>(
-                <img src={img} alt="" key="index" className='slide'></img>
-              ))
-                }
-          </div>
-          <div className="slideshowDots">
-            {slides.map((_, idx) => (
-          <div key={idx} 
-          className={`slideshowDot${index === idx ? " active" : ""}`}
-          onClick={() => {
-            setIndex(idx);
-          }}></div>
-         ))}
-      </div>
-    </div>
-  )
-}
-
-export default Slideshow
+export default Slideshow;

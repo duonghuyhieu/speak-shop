@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import Content from "../components/Content";
 import { getProducts } from "../Services/product-service";
 
-const Clothes = () => {
+const Electronic = () => {
   const [listProduct, setListProduct] = useState([]);
+
   const handleGetProduct = async () => {
     const response = await getProducts();
     setListProduct(
-      response.data.filter((product) => product.category.id === 1)
+      response.data.filter((product) => product.category.id === 2)
     );
   };
 
@@ -16,6 +17,6 @@ const Clothes = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return <Content listProduct={listProduct} title="Clothes" />;
+  return <Content listProduct={listProduct} title="Electronic" />;
 };
-export default Clothes;
+export default Electronic;

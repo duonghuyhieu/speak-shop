@@ -1,31 +1,21 @@
-import React from 'react'
-import '../Styles/Home.css'
-import line from '../assets/line.png'
-import bannermini from '../assets/banner_mini.jpg'
-import Slideshow from '../components/Slideshow'
-import storesystem from '../assets/store_system.jpg'
-import Banner from '../components/Banner'
-function Home() {
-  fetch('https://api.escuelajs.co/api/v1/products')
-  //categories Clothes Electronic Furniture Shoes Others
-          .then(res=>res.json())
-          .then(json => console.log(json))
-  return ( 
-    <div>
-        
-        <div className='Home__container' >
-        <Slideshow />
-        <Banner />
-          <h1>NEW ARRIVALS</h1>
-        <img src={line} alt=''/>
-        <img src={bannermini} className='Home_bannermini' alt=''/>
-        <h1>STORE SYSTEM</h1>
-        <img src={line} alt=''/>
-        <img src={storesystem} className='Home_storesystem' alt=''/>
-        
-    </div>
-    </div>
-  )
-}
+import React from "react";
+import Slideshow from "../components/Slideshow";
+import Banner from "../components/Banner";
+import { Banner as BannerImages } from "../assets";
+import "../Styles/Home.css";
+const Home = () => {
+  return (
+    <>
+      <Slideshow />
+      <Banner />
+      <h1>NEW ARRIVALS</h1>
+      <img src={BannerImages.line} alt="" />
+      <img src={BannerImages.mini} className="Home_bannerMini" alt="" />
+      <h1>STORE SYSTEM</h1>
+      <img src={BannerImages.line} alt="" />
+      <img src={BannerImages.system} className="Home_storeSystem" alt="" />
+    </>
+  );
+};
 
-export default Home
+export default Home;

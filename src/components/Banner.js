@@ -1,30 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Clothes from "../assets/banner_clothes.jpg";
-import Electronic from "../assets/banner_electronic.jpg";
-import Furniture from "../assets/banner_furniture.jpg";
-import Shoes from "../assets/banner_shoes.jpg";
-import Others from "../assets/banner_others.jpg";
+import { Banner as BannerImages } from "../assets";
 
 import "../Styles/Banner.css";
+
 function Banner() {
   return (
     <div className="Banner__wrapper grid">
       <Link to="/clothes" className="grid-1 ">
-        <img src={Clothes} alt=""></img>
+        <img src={BannerImages.clothes} alt=""></img>
       </Link>
-      <Link to="/electronic" className="grid-item">
-        <img src={Electronic} alt=""></img>
+      <Link to="/electronics" className="grid-item">
+        <img src={BannerImages.electronic} alt=""></img>
       </Link>
       <Link to="/furniture" className="grid-item">
-        <img src={Furniture} alt=""></img>
+        <img src={BannerImages.furniture} alt=""></img>
       </Link>
       <Link to="/shoes" className="grid-item">
-        <img src={Shoes} alt=""></img>
+        <img src={BannerImages.shoes} alt=""></img>
       </Link>
       <Link to="/others" className="grid-item">
-        <img src={Others} alt=""></img>
+        <img src={BannerImages.others} alt=""></img>
       </Link>
     </div>
   );

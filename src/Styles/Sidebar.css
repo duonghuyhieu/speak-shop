@@ -10,9 +10,9 @@
     background-color: #ffffff;
 }
 
-.Sidebar__shopname {
+.Sidebar__shopName {
     font-weight: 900;
- padding: 25px 0;
+    padding: 25px 0;
 }
 
 .Sidebar__extra{
@@ -24,7 +24,7 @@
     font-size: 18px;
 }
 
-.Sidebar__navlink{
+.Sidebar__navLink{
     list-style: none;
     padding: 0;
     display: grid;
@@ -74,4 +74,10 @@
 .Sidebar__connect i {
     padding: 7px 8px;
     color: #7d7d7d;
+}
+
+.Nav__link-selected {
+    text-decoration: underline;
+    color: #78cccd;
+    background-color: #f7f7f7;
 }
