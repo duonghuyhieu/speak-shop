@@ -1,10 +1,10 @@
 import React from "react";
 import "../Styles/Footer.css";
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="Footer__container">
-      <div className="Footer__infomation">
+      <div className="Footer__information">
         <div className="Hotline__box">
           <h4>ONLINE SHOPPING</h4>
           <h5>0938.188.188</h5>
@@ -60,6 +60,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

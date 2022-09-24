@@ -14,8 +14,8 @@ function ProductItem(props) {
     >
       <img src={props.img} alt="" />
       <div className="PI__info">
-        <h2>{props.title}</h2>
-        <p>{props.price}</p>
+        <h2 className="PI_info-title">{props.title}</h2>
+        <p className="PI_info-price">{props.price}$</p>
       </div>
     </div>
   );

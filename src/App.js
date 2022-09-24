@@ -46,7 +46,6 @@ function App() {
           element={<DefaultLayout children={<DetailProductPage />} />}
         />
       </Routes>
-      <Footer />
     </Router>
   );
 }

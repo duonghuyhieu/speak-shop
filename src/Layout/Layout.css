@@ -1,11 +1,11 @@
-.DefaultLayout {
-    display: flex;
+/* .DefaultLayout {
+  display: flex;
 }
 
 .DefaultLayout__sideBar {
-    width: 290px;
-}
+  width: 290px;
+} */
 .DefaultLayout__content {
-    flex: 1;
-    padding: 20px
+  overflow-y: scroll;
+  height: 100vh;
 }

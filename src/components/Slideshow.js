@@ -20,7 +20,6 @@ const Slideshow = () => {
     };
   }, []);
 
-  console.log(index, slides.length - 1);
   return (
     <div
       className="Home__slideWrapper"

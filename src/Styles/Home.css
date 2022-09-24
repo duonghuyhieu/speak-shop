@@ -1,14 +1,14 @@
 .Home__container {
-    margin-left: 290px;
-    text-align: center;
-    padding-bottom: 0;
+  margin-left: 290px;
+  text-align: center;
+  padding-bottom: 0;
 }
 
-.Home_bannerMini{
-    width: 60%;
-    margin: 0 300px;
-    min-width: 500px;
+.Home_bannerMini {
+  width: 60%;
+  margin: 0 300px;
+  min-width: 500px;
 }
 .Home_storeSystem {
-    width: 100%;
+  width: 100%;
 }

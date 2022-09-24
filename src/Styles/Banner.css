@@ -1,40 +1,14 @@
-.Banner__wrapper{
-    margin-top: 50px;
+.Banner {
+  margin-bottom: 30px;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 50% 50%;
+.Banner_image {
+  width: 100%;
+  border-radius: 4px;
 }
 
-.grid img{
-    width: 100%;
+@media (max-width: 1300px) {
+  .Banner {
+    display: none;
+  }
 }
-
-.grid-1 {
-    grid-column: 1/2;
-grid-row: 1/3;
-margin-right: 30px;
-}
-
-.grid-right{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.grid-item {
-    margin: 0 0 0 15px;
-}
-
-.grid img::before{
-    background:rgba(0,0,0,0.6);
-    opacity: 1;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-}
-
-.grid img:hover{
-    opacity: 1;
-}
-

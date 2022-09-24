@@ -1,4 +1,6 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+
 import { Loading } from "../Loading";
 import ProductItem from "../ProductItem";
 
@@ -20,20 +22,27 @@ const Content = ({ listProduct = [], title, loading }) => {
         <div className="Content">
           <h1 className="Content__title"> {title} </h1>
           <div className="Content__container">
-            {listProduct?.length > 0 &&
-              listProduct?.map((item, index) => {
-                if (item.images[1]) {
-                  return (
-                    <ProductItem
-                      key={index}
-                      id={item.id}
-                      title={item.title}
-                      price={item.price}
-                      img={item.images[1]}
-                    />
-                  );
-                }
-              })}
+            <Container>
+              <Row>
+                {listProduct?.length > 0 &&
+                  // eslint-disable-next-line array-callback-return
+                  listProduct?.map((item, index) => {
+                    if (item.images[1]) {
+                      return (
+                        <Col sm={6} md={4} xl={3}>
+                          <ProductItem
+                            key={index}
+                            id={item.id}
+                            title={item.title}
+                            price={item.price}
+                            img={item.images[1]}
+                          />
+                        </Col>
+                      );
+                    }
+                  })}
+              </Row>
+            </Container>
           </div>
         </div>
       )}

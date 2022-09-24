@@ -24,3 +24,22 @@ export const menuSideBar = [
     link: "/others",
   },
 ];
+
+const test = [
+  {
+    icon: "user",
+    action: "action",
+  },
+  {
+    icon: "user",
+    action: "action",
+  },
+  {
+    icon: "user",
+    action: "action",
+  },
+  {
+    icon: "user",
+    action: "action",
+  },
+];
