@@ -1,11 +1,16 @@
-import React from "react";
+import { useContext, useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 
+import { AppContext } from "../store";
 import { menuSideBar } from "../constants";
+import Cart from "./Cart";
+import Modal from "../components/Modal";
 import "../Styles/Sidebar.css";
 
-function Sidebar() {
+const Sidebar = () => {
   const { pathname } = useLocation();
+  const { state } = useContext(AppContext);
+  const [visibleModalCart, setVisibleModalCart] = useState(false);
   return (
     <div className="Sidebar__container">
       <div className="Sidebar__content">
@@ -19,7 +24,10 @@ function Sidebar() {
           <i className="fa-regular fa-circle-user"></i>
           <i className="fa-solid fa-magnifying-glass"></i>
           <i className="fa-regular fa-heart"></i>
-          <i className="fa-solid fa-bag-shopping"></i>
+          <Cart
+            totalProduct={state.cart.length}
+            onClick={() => setVisibleModalCart(true)}
+          />
         </div>
         <ul className="Sidebar__navLink">
           {menuSideBar.map((menu, index) => (
@@ -47,8 +55,19 @@ function Sidebar() {
           <i className="fa-brands fa-tiktok"></i>
         </div>
       </div>
+
+      <Modal
+        visible={visibleModalCart}
+        onCloseModal={() => setVisibleModalCart(false)}
+      >
+        <div
+          style={{ width: "100px", height: "100px", backgroundColor: "white" }}
+        >
+          children
+        </div>
+      </Modal>
     </div>
   );
-}
+};
 
 export default Sidebar;

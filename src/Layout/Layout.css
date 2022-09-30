@@ -1,11 +1,8 @@
-/* .DefaultLayout {
-  display: flex;
-}
-
-.DefaultLayout__sideBar {
-  width: 290px;
-} */
 .DefaultLayout__content {
   overflow-y: scroll;
   height: 100vh;
+}
+.Navbar {
+  padding: 12px 0px;
+  margin-bottom: 30px;
 }

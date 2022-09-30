@@ -13,7 +13,6 @@ const DefaultLayout = ({ children }) => {
           <Col sm={3} lg={2}>
             <Sidebar />
           </Col>
-
           <Col sm={9} lg={10}>
             <div className="DefaultLayout__content">
               {children}

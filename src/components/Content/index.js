@@ -29,9 +29,8 @@ const Content = ({ listProduct = [], title, loading }) => {
                   listProduct?.map((item, index) => {
                     if (item.images[1]) {
                       return (
-                        <Col sm={6} md={4} xl={3}>
+                        <Col sm={6} md={4} xl={3} key={index}>
                           <ProductItem
-                            key={index}
                             id={item.id}
                             title={item.title}
                             price={item.price}

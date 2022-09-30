@@ -1,9 +1,13 @@
-import React from "react";
+import { useContext } from "react";
+
+import { AppContext } from "../store";
 import Slideshow from "../components/Slideshow";
 import Banner from "../components/Banner";
 import { Banner as BannerImages } from "../assets";
 import "../Styles/Home.css";
 const Home = () => {
+  const { state } = useContext(AppContext);
+  console.log(state); 
   return (
     <>
       <Slideshow />
