@@ -27,7 +27,7 @@ const ProductItem = (props) => {
           <p className="PI__info-price">{props.price}$</p>
           <span
             onClick={() => {
-              handleAddProductInCart(props.id);
+              handleAddProductInCart({ ...props, quantity: 1 });
             }}
             className="PI__info-cart"
           >

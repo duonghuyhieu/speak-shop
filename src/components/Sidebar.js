@@ -6,6 +6,7 @@ import { menuSideBar } from "../constants";
 import Cart from "./Cart";
 import Modal from "../components/Modal";
 import "../Styles/Sidebar.css";
+import ModalCart from "./ModalCart";
 
 const Sidebar = () => {
   const { pathname } = useLocation();
@@ -60,11 +61,7 @@ const Sidebar = () => {
         visible={visibleModalCart}
         onCloseModal={() => setVisibleModalCart(false)}
       >
-        <div
-          style={{ width: "100px", height: "100px", backgroundColor: "white" }}
-        >
-          children
-        </div>
+        <ModalCart onCloseModal={() => setVisibleModalCart(false)} />
       </Modal>
     </div>
   );
