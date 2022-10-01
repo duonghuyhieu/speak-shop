@@ -10,8 +10,9 @@ const ProductItem = (props) => {
     navigate(`/product/${idProduct}`);
   };
   const { dispatch } = useContext(AppContext);
-  const handleAddProductInCart = (idProduct) => {
-    dispatch({ type: ACTIONS.ADD_PRODUCT_CART, payload: idProduct });
+
+  const handleAddProductInCart = (dataProduct) => {
+    dispatch({ type: ACTIONS.ADD_PRODUCT_CART, payload: dataProduct });
   };
 
   return (

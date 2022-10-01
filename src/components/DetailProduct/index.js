@@ -18,11 +18,11 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
     dispatch({
       type: ACTIONS.ADD_PRODUCT_CART,
       payload: {
-        id: idProduct,
+        id: data?.id,
         img: data?.images[0],
         price: data?.price,
         quantity: 1,
-        title: title,
+        title: data?.title,
       },
     });
   };
