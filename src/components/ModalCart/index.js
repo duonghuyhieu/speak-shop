@@ -15,6 +15,8 @@ const ModalCart = ({ onCloseModal }) => {
     }
     return totalPrice;
   }, [cart]);
+
+  console.log(cart);
   return (
     <Animate play keyframes={["opacity: 0", "opacity: 1"]}>
       <div className="ModalCart">

@@ -6,7 +6,8 @@ import { Loading } from "../Loading";
 
 import "./DetailProduct.css";
 
-const DetailProduct = ({ data, title, loading }) => {
+const DetailProduct = ({ data, title, loading, idProduct }) => {
+  console.log(data);
   const [indexImage, setIndexImage] = useState(0);
   const { dispatch } = useContext(AppContext);
   const navigate = useNavigate();
@@ -14,7 +15,16 @@ const DetailProduct = ({ data, title, loading }) => {
     navigate(`/${categoryName}`);
   };
   const handleAddProductInCart = () => {
-    dispatch({ type: ACTIONS.ADD_PRODUCT_CART, payload: data });
+    dispatch({
+      type: ACTIONS.ADD_PRODUCT_CART,
+      payload: {
+        id: idProduct,
+        img: data?.images[0],
+        price: data?.price,
+        quantity: 1,
+        title: title,
+      },
+    });
   };
   const handleNextImage = () => {
     setIndexImage((prev) => {

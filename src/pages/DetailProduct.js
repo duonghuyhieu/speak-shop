@@ -26,7 +26,12 @@ const DetailProductPage = () => {
   }, [idProduct]);
 
   return (
-    <DetailProduct loading={isLoading} title="Detail Product" data={data} />
+    <DetailProduct
+      loading={isLoading}
+      title="Detail Product"
+      data={data}
+      idProduct={idProduct}
+    />
   );
 };
 export default DetailProductPage;
