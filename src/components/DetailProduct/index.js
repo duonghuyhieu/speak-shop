@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { ACTIONS, AppContext } from "../../store";
 import { Loading } from "../Loading";
 
 import "./DetailProduct.css";
 
 const DetailProduct = ({ data, title, loading }) => {
   const [indexImage, setIndexImage] = useState(0);
+  const { dispatch } = useContext(AppContext);
   const navigate = useNavigate();
   const handleNavigateCategory = (categoryName) => {
     navigate(`/${categoryName}`);
+  };
+  const handleAddProductInCart = () => {
+    dispatch({ type: ACTIONS.ADD_PRODUCT_CART, payload: data });
   };
   const handleNextImage = () => {
     setIndexImage((prev) => {
@@ -71,6 +76,13 @@ const DetailProduct = ({ data, title, loading }) => {
               >
                 Category: {data?.category?.name}
               </div>
+              <button
+                onClick={handleAddProductInCart}
+                className="DetailProduct__button"
+              >
+                Add to cart
+                <i className="fa-solid fa-cart-plus"></i>
+              </button>
             </div>
           </div>
         </>

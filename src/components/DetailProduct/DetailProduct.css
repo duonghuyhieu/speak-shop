@@ -1,75 +1,85 @@
 .DetailProduct {
-    display: flex;
+  display: flex;
 }
-
 
 .DetailProduct__loading {
-    width: 100%;
-    height: 60vh;
+  width: 100%;
+  height: 60vh;
 }
 .DetailProduct__title {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 30px;
-    font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .DetailProduct__images {
-    display: flex;
-    align-items: center;
-    width: 400px;
-    height: 550px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 0.5s linear;
-    border-radius: 8px;   
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.5s linear;
+  border-radius: 8px;
 }
 
 .DetailProduct__images-action {
-    width: 100%;
-    font-size: 20px;
-    color: #183153;
-    display: flex;
-    padding: 0px 18px;
-    justify-content: space-between;
+  width: 100%;
+  font-size: 20px;
+  color: #183153;
+  display: flex;
+  padding: 0px 18px;
+  justify-content: space-between;
 }
 
 .DetailProduct__images-action i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    opacity: 0.7;
-    cursor: pointer;
-    background-color: white;
-    width: 40px;
-    height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: white;
+  width: 40px;
+  height: 40px;
 }
 
 .DetailProduct__info {
-    flex: 1;
-    padding: 20px;
-    font-weight: 700;
+  flex: 1;
+  padding: 20px;
+  font-weight: 700;
 }
 .DetailProduct__info-title {
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 .DetailProduct__info-price {
-    color: red;
-    font-size: 25px;
-    margin-bottom: 20px;
+  color: red;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .DetailProduct__info-description {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .DetailProduct__info-category {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .DetailProduct__info-category:hover {
-     color: #78cccd;
-     text-decoration: underline;
+  color: #78cccd;
+  text-decoration: underline;
+}
+
+.DetailProduct__button {
+  outline: none;
+  padding: 8px 25px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
