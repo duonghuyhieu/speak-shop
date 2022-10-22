@@ -5,16 +5,20 @@ import { Banner as BannerImages } from "../assets";
 import "../Styles/Home.css";
 const Home = () => {
   return (
-    <>
+    <div className="Home">
       <Slideshow />
       <Banner />
-      <h1>NEW ARRIVALS</h1>
-      <img src={BannerImages.line} alt="" />
+      <div className="Home__title">
+        <h1>NEW ARRIVALS</h1>
+        <img src={BannerImages.line} alt="" />
+      </div>
       <img src={BannerImages.mini} className="Home_bannerMini" alt="" />
-      <h1>STORE SYSTEM</h1>
-      <img src={BannerImages.line} alt="" />
+      <div className="Home__title">
+        <h1>STORE SYSTEM</h1>
+        <img src={BannerImages.line} alt="" />
+      </div>
       <img src={BannerImages.system} className="Home_storeSystem" alt="" />
-    </>
+    </div>
   );
 };
 

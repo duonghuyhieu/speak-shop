@@ -16,7 +16,7 @@
 .DetailProduct__images {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 800px;
   height: 550px;
   background-size: cover;
   background-repeat: no-repeat;

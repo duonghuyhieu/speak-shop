@@ -7,9 +7,8 @@ import { Loading } from "../Loading";
 import "./DetailProduct.css";
 
 const DetailProduct = ({ data, title, loading, idProduct }) => {
-  console.log(data);
   const [indexImage, setIndexImage] = useState(0);
-  const { dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
   const navigate = useNavigate();
   const handleNavigateCategory = (categoryName) => {
     navigate(`/${categoryName}`);
@@ -26,6 +25,8 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
       },
     });
   };
+
+  console.log(state);
   const handleNextImage = () => {
     setIndexImage((prev) => {
       if (prev === data?.images?.length - 1) {

@@ -55,3 +55,15 @@ export const cartReducer = (state = initState, action) => {
       return state;
   }
 };
+
+
+/*
+
+  action () => {
+    return {
+      type: 'String',
+      payload:
+    }
+  }
+
+*/ 

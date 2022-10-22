@@ -43,3 +43,11 @@ const test = [
     action: "action",
   },
 ];
+
+export const idTypeProduct = {
+  CLOTHES: 1,
+  ELECTRONIC: 2,
+  FURNITURE: 3,
+  SHOES: 4,
+  OTHERS: 5,
+};

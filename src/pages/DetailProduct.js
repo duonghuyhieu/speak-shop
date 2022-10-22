@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 import DetailProduct from "../components/DetailProduct";
 import { getProductById } from "../Services/product-service";
 

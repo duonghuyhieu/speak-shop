@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Content from "../components/Content";
 import { getProducts } from "../Services/product-service";
+import { idTypeProduct } from "../constants";
 
 const Furniture = () => {
   const [listProduct, setListProduct] = useState([]);
@@ -10,7 +11,9 @@ const Furniture = () => {
     try {
       const response = await getProducts();
       setListProduct(
-        response.data.filter((product) => product.category.id === 3)
+        response.data.filter(
+          (product) => product.category.id === idTypeProduct.FURNITURE
+        )
       );
     } catch (error) {
       console.log(error);
