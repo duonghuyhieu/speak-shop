@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 
-import { AppContext } from "../store";
-import { menuSideBar } from "../constants";
-import Cart from "./Cart";
-import Modal from "../components/Modal";
-import "../Styles/Sidebar.css";
-import ModalCart from "./ModalCart";
+import { AppContext } from "../../store";
+import { menuSideBar } from "../../constants";
+import Cart from "../Cart";
+import Modal from "../../components/Modal";
+import "./Sidebar.css";
+import ModalCart from "../ModalCart";
 
 const Sidebar = () => {
   const { pathname } = useLocation();

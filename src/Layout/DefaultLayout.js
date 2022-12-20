@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-import Sidebar from "../components/Sidebar";
-import Footer from "../components/Footer";
+import Sidebar from "../components/Layout/Sidebar";
+import Footer from "../components/Layout/Footer";
 
 import "./Layout.css";
 

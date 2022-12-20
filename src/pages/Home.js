@@ -1,5 +1,5 @@
-import Slideshow from "../components/Slideshow";
-import Banner from "../components/Banner";
+import Slideshow from "../components/Home/Slideshow";
+import Banner from "../components/Home/Banner";
 import { Banner as BannerImages } from "../assets";
 
 import "../Styles/Home.css";

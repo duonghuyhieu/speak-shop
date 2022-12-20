@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Banner as BannerImages } from "../assets";
+import { Banner as BannerImages } from "../../assets";
 
-import "../Styles/Banner.css";
+import "./Banner.css";
 
 function Banner() {
   return (
