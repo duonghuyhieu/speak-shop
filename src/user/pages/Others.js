@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-
-import { idTypeProduct } from "../constants";
 import Content from "../components/Content";
-import { getProducts } from "../Services/product-service";
+import { getProducts } from "../services/product-service";
+import { idTypeProduct } from "../constants";
 
-const Clothes = () => {
+const Others = () => {
   const [listProduct, setListProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const handleGetProduct = async () => {
@@ -13,7 +12,7 @@ const Clothes = () => {
       const response = await getProducts();
       setListProduct(
         response.data.filter(
-          (product) => product.category.id === idTypeProduct.CLOTHES
+          (product) => product.category.id === idTypeProduct.OTHERS
         )
       );
     } catch (error) {
@@ -28,7 +27,7 @@ const Clothes = () => {
   }, []);
 
   return (
-    <Content loading={isLoading} listProduct={listProduct} title="Clothes" />
+    <Content loading={isLoading} listProduct={listProduct} title="Others" />
   );
 };
-export default Clothes;
+export default Others;

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Content from "../components/Content";
-import { getProducts } from "../Services/product-service";
-import { idTypeProduct } from "../constants";
 
-const Others = () => {
+import { idTypeProduct } from "../constants";
+import Content from "../components/Content";
+import { getProducts } from "../services/product-service";
+
+const Clothes = () => {
   const [listProduct, setListProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const handleGetProduct = async () => {
@@ -12,7 +13,7 @@ const Others = () => {
       const response = await getProducts();
       setListProduct(
         response.data.filter(
-          (product) => product.category.id === idTypeProduct.OTHERS
+          (product) => product.category.id === idTypeProduct.CLOTHES
         )
       );
     } catch (error) {
@@ -27,7 +28,7 @@ const Others = () => {
   }, []);
 
   return (
-    <Content loading={isLoading} listProduct={listProduct} title="Others" />
+    <Content loading={isLoading} listProduct={listProduct} title="Clothes" />
   );
 };
-export default Others;
+export default Clothes;

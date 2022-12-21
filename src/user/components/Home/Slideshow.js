@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Slice } from "../../assets";
+import { Slice } from "../../../assets";
 import "./Slideshow.css";
 const slides = [Slice.slice1, Slice.slice2, Slice.slice3];
 const Slideshow = () => {

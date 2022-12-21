@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 
 import DetailProduct from "../components/DetailProduct";
-import { getProductById } from "../Services/product-service";
+import { getProductById } from "../services/product-service";
 
 const DetailProductPage = () => {
   const { idProduct } = useParams();
@@ -24,6 +24,7 @@ const DetailProductPage = () => {
   useEffect(() => {
     handleGetData();
     window.scrollTo(0, 0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idProduct]);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Content from "../components/Content";
-import { getProducts } from "../Services/product-service";
+import { getProducts } from "../services/product-service";
 import { idTypeProduct } from "../constants";
 
 const Shoes = () => {

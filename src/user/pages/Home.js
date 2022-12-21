@@ -1,8 +1,8 @@
 import Slideshow from "../components/Home/Slideshow";
 import Banner from "../components/Home/Banner";
-import { Banner as BannerImages } from "../assets";
+import { Banner as BannerImages } from "../../assets";
 
-import "../Styles/Home.css";
+import "../styles/Home.css";
 const Home = () => {
   return (
     <div className="Home">

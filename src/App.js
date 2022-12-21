@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Store, AppContext } from "./store";
-import { DefaultLayout } from "./Layout";
-import Home from "./pages/Home";
-import Clothes from "./pages/Clothes";
-import Electronic from "./pages/Electronic";
-import Furniture from "./pages/Furniture";
-import Shoes from "./pages/Shoes";
-import Others from "./pages/Others";
-import DetailProductPage from "./pages/DetailProduct";
+import { Store, AppContext } from "./user/store";
+import { DefaultLayout } from "./user/layout";
+import Home from "./user/pages/Home";
+import Clothes from "./user/pages/Clothes";
+import Electronic from "./user/pages/Electronic";
+import Furniture from "./user/pages/Furniture";
+import Shoes from "./user/pages/Shoes";
+import Others from "./user/pages/Others";
+import DetailProductPage from "./user/pages/DetailProduct";
 import "./App.css";
 function App() {
   const { state, dispatch } = Store();
