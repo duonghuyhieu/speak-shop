@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Store, AppContext } from "./user/store";
 import { DefaultLayout } from "./user/layout";
+import { AdminLayout } from "./admin/layout";
+import User from "./admin/pages/User";
+import Product from "./admin/pages/Product";
 import Home from "./user/pages/Home";
 import Clothes from "./user/pages/Clothes";
 import Electronic from "./user/pages/Electronic";
@@ -21,6 +24,16 @@ function App() {
             exact
             path="/"
             element={<DefaultLayout children={<Home />} />}
+          />
+          <Route
+            exact
+            path="/admin/user"
+            element={<AdminLayout children={<User />} />}
+          />
+          <Route
+            exact
+            path="/admin/product"
+            element={<AdminLayout children={<Product />} />}
           />
           <Route
             exact

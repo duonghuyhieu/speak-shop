@@ -25,24 +25,24 @@ export const menuSideBar = [
   },
 ];
 
-const test = [
-  {
-    icon: "user",
-    action: "action",
-  },
-  {
-    icon: "user",
-    action: "action",
-  },
-  {
-    icon: "user",
-    action: "action",
-  },
-  {
-    icon: "user",
-    action: "action",
-  },
-];
+// const test = [
+//   {
+//     icon: "user",
+//     action: "action",
+//   },
+//   {
+//     icon: "user",
+//     action: "action",
+//   },
+//   {
+//     icon: "user",
+//     action: "action",
+//   },
+//   {
+//     icon: "user",
+//     action: "action",
+//   },
+// ];
 
 export const idTypeProduct = {
   CLOTHES: 1,

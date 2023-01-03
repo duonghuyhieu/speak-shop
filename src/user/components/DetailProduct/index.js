@@ -53,7 +53,7 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
           <h3 className="DetailProduct__title">{title}</h3>
           <Loading />
         </div>
-      ) : (
+      ) : ( 
         <>
           <h3 className="DetailProduct__title">{title}</h3>
           <div className="DetailProduct">
