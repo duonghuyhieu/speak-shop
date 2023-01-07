@@ -29,8 +29,7 @@ const ProductItem = (props) => {
             onClick={() => {
               handleAddProductInCart({ ...props, quantity: 1 });
             }}
-            className="PI__info-cart"
-          >
+            className="PI__info-cart">
             Add to cart
             <i className="fa-solid fa-cart-plus"></i>
           </span>

@@ -1,8 +1,9 @@
 import React from "react";
+import "./ShowUser.css";
 
 const ShowUser = (props) => {
   return (
-    <div>
+    <div class="su__container">
       <div>{props.id}</div>
       <div>
         {props.firstName}

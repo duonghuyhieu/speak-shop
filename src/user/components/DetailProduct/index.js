@@ -27,6 +27,7 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
   };
 
   console.log(state);
+  console.log(data);
   const handleNextImage = () => {
     setIndexImage((prev) => {
       if (prev === data?.images?.length - 1) {
@@ -53,23 +54,20 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
           <h3 className="DetailProduct__title">{title}</h3>
           <Loading />
         </div>
-      ) : ( 
+      ) : (
         <>
           <h3 className="DetailProduct__title">{title}</h3>
           <div className="DetailProduct">
             <div
               className="DetailProduct__images"
-              style={{ backgroundImage: `url(${data?.images[indexImage]})` }}
-            >
+              style={{ backgroundImage: `url(${data?.images[indexImage]})` }}>
               <div className="DetailProduct__images-action">
                 <i
                   onClick={handlePreventImage}
-                  className="fa-solid fa-angle-left"
-                ></i>
+                  className="fa-solid fa-angle-left"></i>
                 <i
                   onClick={handleNextImage}
-                  className="fa-solid fa-angle-right"
-                ></i>
+                  className="fa-solid fa-angle-right"></i>
               </div>
             </div>
 
@@ -83,14 +81,12 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
               </div>
               <div
                 onClick={() => handleNavigateCategory(data?.category?.name)}
-                className="DetailProduct__info-category"
-              >
+                className="DetailProduct__info-category">
                 Category: {data?.category?.name}
               </div>
               <button
                 onClick={handleAddProductInCart}
-                className="DetailProduct__button"
-              >
+                className="DetailProduct__button">
                 Add to cart
                 <i className="fa-solid fa-cart-plus"></i>
               </button>
