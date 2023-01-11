@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AddUserForm from "../components/AddUser/AddUser";
+import UserForm from "../components/AddUser/UserForm";
 import ShowUser from "../components/ShowUser/ShowUser";
 import { getUsers } from "../services/admin-service";
 import Modal from "../../user/components/Modal";
@@ -7,6 +7,7 @@ import "./User.css";
 function User() {
   const [listUser, setListUser] = useState([]);
   const [showAddUser, setShowAddUser] = useState(false);
+  const [idEdit, setIdEdit] = useState(0);
   const handleAddUser = () => {
     setShowAddUser(!showAddUser);
   };
@@ -20,17 +21,26 @@ function User() {
     }
   };
 
+  const handleEditUser = (id) => {
+    setIdEdit(id);
+    handleAddUser();
+  };
   useEffect(() => {
     handleGetUser();
     window.scrollTo(0, 0);
-  }, [showAddUser]);
+    console.log(listUser);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div class="user__container">
       <Modal visible={showAddUser} onCloseModal={() => setShowAddUser(false)}>
-        <AddUserForm
-          onAddUser={handleGetUser}
+        <UserForm
+          onGetUser={handleGetUser}
           show={showAddUser}
           onClose={handleAddUser}
+          user={listUser.find((user) => user.id === idEdit)}
+          onEdit={handleEditUser}
+          isEdit={idEdit}
         />
       </Modal>
 
@@ -55,11 +65,13 @@ function User() {
           listUser?.map((item, index) => {
             return (
               <ShowUser
+                onGetUser={handleGetUser}
                 id={item.id}
                 firstName={item.firstName}
                 lastName={item.lastName}
                 email={item.email}
-                password={item.password}></ShowUser>
+                password={item.password}
+                onEdit={handleEditUser}></ShowUser>
             );
           })}
       </div>

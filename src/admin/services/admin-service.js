@@ -17,3 +17,24 @@ export const addUser = async (firstName, lastName, email, password) => {
     console.error(error);
   }
 };
+export const deleteUser = async (id) => {
+  try {
+    const response = await ApiClient.delete(`/user/${id}`);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+export const editUser = async (firstName, lastName, email, password, id) => {
+  try {
+    const response = await ApiClient.put(`/user/${id}`, {
+      firstName,
+      lastName,
+      email,
+      password,
+    });
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};

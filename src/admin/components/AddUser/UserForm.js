@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { addUser } from "../../services/admin-service";
-import "./AddUser.css";
+import { addUser, editUser } from "../../services/admin-service";
 
-function AddUser(props) {
+import "./UserForm.css";
+
+function UserForm(props) {
   const {
     register,
     handleSubmit,
@@ -11,27 +12,32 @@ function AddUser(props) {
     reset,
   } = useForm({
     defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
+      ...props.user,
     },
   });
-
-  const onSubmit = async (data) => {
-    addUser(data.firstName, data.lastName, data.email, data.password)
-      .then((response) => {
-        props.onClose();
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  const handleSubmitHelper = (id, data, serviceFunc) => {
+    console.log(data);
+    handleSubmit(() => {
+      serviceFunc(data.firstName, data.lastName, data.email, data.password, id)
+        .then((response) => {
+          props.onClose();
+          reset();
+          props.onEdit(0);
+          props.onGetUser();
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    })();
   };
 
-  useEffect(() => {
-    reset();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.show]);
+  const onSubmit = (data) => {
+    if (props.isEdit) {
+      handleSubmitHelper(props.user.id, data, editUser);
+    } else {
+      handleSubmitHelper(null, data, addUser);
+    }
+  };
 
   return (
     <div>
@@ -111,4 +117,4 @@ function AddUser(props) {
   );
 }
 
-export default AddUser;
+export default UserForm;
