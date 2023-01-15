@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import { idTypeProduct } from "../constants";
 import Content from "../components/Content";
 import { getProducts } from "../services/product-service";
 
@@ -12,9 +10,7 @@ const Clothes = () => {
     try {
       const response = await getProducts();
       setListProduct(
-        response.data.filter(
-          (product) => product.category.id === idTypeProduct.CLOTHES
-        )
+        response.data.filter((product) => product.category === "Jacket")
       );
     } catch (error) {
     } finally {

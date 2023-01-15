@@ -5,6 +5,7 @@ import "./ProductItem.css";
 
 const ProductItem = (props) => {
   const navigate = useNavigate();
+  console.log(props);
   const handelNavigateToDetailPage = (idProduct) => {
     navigate(`/product/${idProduct}`);
   };
@@ -17,7 +18,7 @@ const ProductItem = (props) => {
   return (
     <div className="PI__container">
       <img
-        src={props.img}
+        src={props.img.URLImg}
         alt=""
         onClick={() => handelNavigateToDetailPage(props.id)}
       />

@@ -21,10 +21,9 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div
-      className="Home__slideWrapper"
-      style={{ backgroundImage: `url(${slides[index]})` }}
-    />
+    <div>
+      <img className="Home__slideWrapper" src={slides[index]} alt=""></img>
+    </div>
   );
 };
 

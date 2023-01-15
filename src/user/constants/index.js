@@ -8,20 +8,20 @@ export const menuSideBar = [
     link: "/clothes",
   },
   {
-    label: "Electronics",
-    link: "/electronics",
+    label: "Backpack",
+    link: "/backpack",
   },
   {
-    label: "Furniture",
-    link: "/furniture",
+    label: "Slingbag",
+    link: "/slingbag",
   },
   {
-    label: "Shoes",
-    link: "/shoes",
+    label: "Cap",
+    link: "/cap",
   },
   {
-    label: "Others",
-    link: "/others",
+    label: "Belt",
+    link: "/belt",
   },
 ];
 
@@ -46,7 +46,7 @@ export const menuSideBar = [
 
 export const idTypeProduct = {
   CLOTHES: 1,
-  ELECTRONIC: 2,
+  BACKPACK: 2,
   FURNITURE: 3,
   SHOES: 4,
   OTHERS: 5,

@@ -1,10 +1,9 @@
 import clothes from "./banner_clothes.jpg";
-import electronic from "./banner_electronic.jpg";
-import furniture from "./banner_furniture.jpg";
 import mini from "./banner_mini.jpg";
-import others from "./banner_others.jpg";
-import shoes from "./banner_shoes.jpg";
-import psd from "./banner.psd";
+import backpack from "./banner_backpack.jpg";
+import slingbag from "./banner_slingbag.jpg";
+import cap from "./banner_cap.jpg";
+import belt from "./banner_belt.jpg";
 import line from "./line.png";
 import slice1 from "./Slide1.jpg";
 import slice2 from "./Slide2.jpg";
@@ -13,12 +12,11 @@ import system from "./store_system.jpg";
 
 export const Banner = {
   clothes,
-  electronic,
-  furniture,
   mini,
-  others,
-  shoes,
-  psd,
+  backpack,
+  slingbag,
+  cap,
+  belt,
   line,
   system,
 };

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Content from "../components/Content";
 import { getProducts } from "../services/product-service";
-import { idTypeProduct } from "../constants";
 
-const Shoes = () => {
+const Backpack = () => {
   const [listProduct, setListProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -11,12 +10,12 @@ const Shoes = () => {
     setIsLoading(true);
     try {
       const response = await getProducts();
+      console.log(response.data);
       setListProduct(
-        response.data.filter(
-          (product) => product.category.id === idTypeProduct.SHOES
-        )
+        response.data.filter((product) => product.category === "Backpack")
       );
     } catch (error) {
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
@@ -28,7 +27,7 @@ const Shoes = () => {
   }, []);
 
   return (
-    <Content loading={isLoading} listProduct={listProduct} title="Shoes" />
+    <Content loading={isLoading} listProduct={listProduct} title="Backpack" />
   );
 };
-export default Shoes;
+export default Backpack;

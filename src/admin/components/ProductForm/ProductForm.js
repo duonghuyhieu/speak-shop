@@ -177,8 +177,8 @@ function ProductForm(props) {
               <option value="Jacket">Jacket</option>
               <option value="Backpack">Backpack</option>
               <option value="Sling Bag">Sling Bag</option>
-              <option value="cap">Cap</option>
-              <option value="belt">Belt</option>
+              <option value="Cap">Cap</option>
+              <option value="Belt">Belt</option>
             </select>
           </div>
 

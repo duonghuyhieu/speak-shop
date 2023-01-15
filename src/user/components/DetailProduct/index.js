@@ -60,7 +60,9 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
           <div className="DetailProduct">
             <div
               className="DetailProduct__images"
-              style={{ backgroundImage: `url(${data?.images[indexImage]})` }}>
+              style={{
+                backgroundImage: `url(${data?.images[indexImage].URLImg})`,
+              }}>
               <div className="DetailProduct__images-action">
                 <i
                   onClick={handlePreventImage}
@@ -80,9 +82,9 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
                 {data?.description}
               </div>
               <div
-                onClick={() => handleNavigateCategory(data?.category?.name)}
+                onClick={() => handleNavigateCategory(data?.category)}
                 className="DetailProduct__info-category">
-                Category: {data?.category?.name}
+                Category: {data?.category}
               </div>
               <button
                 onClick={handleAddProductInCart}

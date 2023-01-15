@@ -17,43 +17,38 @@ function Banner() {
               <img
                 className="Banner_image"
                 src={BannerImages.clothes}
-                alt=""
-              ></img>
+                alt=""></img>
             </Link>
           </Col>
 
           <Col sm={12} lg={6}>
             <Row>
               <Col>
-                <Link to="/electronics">
+                <Link to="/backpack">
                   <img
                     className="Banner_image"
-                    src={BannerImages.electronic}
-                    alt=""
-                  ></img>
+                    src={BannerImages.backpack}
+                    alt=""></img>
                 </Link>
-                <Link to="/furniture">
+                <Link to="/cap">
                   <img
                     className="Banner_image"
-                    src={BannerImages.furniture}
-                    alt=""
-                  ></img>
+                    src={BannerImages.cap}
+                    alt=""></img>
                 </Link>
               </Col>
               <Col>
-                <Link to="/shoes">
+                <Link to="/slingbag">
                   <img
                     className="Banner_image"
-                    src={BannerImages.shoes}
-                    alt=""
-                  ></img>
+                    src={BannerImages.slingbag}
+                    alt=""></img>
                 </Link>
-                <Link to="/others">
+                <Link to="/belt">
                   <img
                     className="Banner_image"
-                    src={BannerImages.others}
-                    alt=""
-                  ></img>
+                    src={BannerImages.belt}
+                    alt=""></img>
                 </Link>
               </Col>
             </Row>

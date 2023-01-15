@@ -8,10 +8,10 @@ import User from "./admin/pages/User";
 import Product from "./admin/pages/Product";
 import Home from "./user/pages/Home";
 import Clothes from "./user/pages/Clothes";
-import Electronic from "./user/pages/Electronic";
-import Furniture from "./user/pages/Furniture";
-import Shoes from "./user/pages/Shoes";
-import Others from "./user/pages/Others";
+import Backpack from "./user/pages/Backpack";
+import Slingbag from "./user/pages/Slingbag";
+import Cap from "./user/pages/Cap";
+import Belt from "./user/pages/Belt";
 import DetailProductPage from "./user/pages/DetailProduct";
 import "./App.css";
 function App() {
@@ -42,23 +42,23 @@ function App() {
           />
           <Route
             exact
-            path="/electronics"
-            element={<DefaultLayout children={<Electronic />} />}
+            path="/backpack"
+            element={<DefaultLayout children={<Backpack />} />}
           />
           <Route
             exact
-            path="/furniture"
-            element={<DefaultLayout children={<Furniture />} />}
+            path="/slingbag"
+            element={<DefaultLayout children={<Slingbag />} />}
           />
           <Route
             exact
-            path="/shoes"
-            element={<DefaultLayout children={<Shoes />} />}
+            path="/cap"
+            element={<DefaultLayout children={<Cap />} />}
           />
           <Route
             exact
-            path="/others"
-            element={<DefaultLayout children={<Others />} />}
+            path="/belt"
+            element={<DefaultLayout children={<Belt />} />}
           />
           <Route
             exact
