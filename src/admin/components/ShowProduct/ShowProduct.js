@@ -1,24 +1,23 @@
 import React from "react";
-import { deleteUser } from "../../services/user-service";
-import "./ShowUser.css";
+import { deleteProduct } from "../../services/product-service";
+import "./ShowProduct.css";
 
-const ShowUser = (props) => {
+const ShowProduct = (props) => {
   const onDelete = async (id) => {
-    const result = await deleteUser(id);
+    const result = await deleteProduct(id);
     console.log(result);
-    props.onGetUser();
+    props.onGetProduct();
   };
+  console.log(props);
   const handleEdit = (id) => {
     props.onEdit(id);
   };
   return (
     <div class="su__container">
       <div>{props.id}</div>
-      <div>
-        {props.firstName} {props.lastName}
-      </div>
-      <div>{props.email}</div>
-      <div>{props.password}</div>
+      <div>{props.title}</div>
+      <div>{props.price}</div>
+      <div>{props.category}</div>
       <div>
         <i
           type="button"
@@ -33,4 +32,4 @@ const ShowUser = (props) => {
   );
 };
 
-export default ShowUser;
+export default ShowProduct;

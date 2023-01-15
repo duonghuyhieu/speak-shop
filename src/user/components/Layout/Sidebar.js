@@ -15,7 +15,7 @@ const Sidebar = () => {
   return (
     <div className="Sidebar__container">
       <div className="Sidebar__content">
-        <Link to="/" className="Content__name">
+        <Link to="/admin/user" className="Content__name">
           <h1 className="Sidebar__shopName">
             {" "}
             Speak <br /> Shop{" "}
@@ -37,8 +37,7 @@ const Sidebar = () => {
               to={menu.link}
               className={`Nav__links ${
                 menu.link === pathname ? "Nav__link-selected" : ""
-              }`}
-            >
+              }`}>
               {menu.label}
             </NavLink>
           ))}
@@ -59,8 +58,7 @@ const Sidebar = () => {
 
       <Modal
         visible={visibleModalCart}
-        onCloseModal={() => setVisibleModalCart(false)}
-      >
+        onCloseModal={() => setVisibleModalCart(false)}>
         <ModalCart onCloseModal={() => setVisibleModalCart(false)} />
       </Modal>
     </div>

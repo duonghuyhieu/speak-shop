@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { addUser, editUser } from "../../services/admin-service";
+import { addUser, editUser } from "../../services/user-service";
 
 import "./UserForm.css";
 
