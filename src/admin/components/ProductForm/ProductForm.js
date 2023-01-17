@@ -79,6 +79,11 @@ function ProductForm(props) {
     },
   });
 
+  const closeForm = () => {
+    props.onClose();
+    props.onEdit(0);
+  };
+
   const handleSubmitHelper = (id, data, serviceFunc) => {
     console.log(data);
     handleSubmit(() => {
@@ -186,7 +191,7 @@ function ProductForm(props) {
             <button type="submit" disabled={isSubmitting} class="form__button">
               Submit
             </button>
-            <button type="button" onClick={props.onClose} class="form__button">
+            <button type="button" onClick={closeForm} class="form__button">
               Close
             </button>
           </div>

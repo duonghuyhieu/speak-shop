@@ -93,13 +93,11 @@ function User() {
 
       <div>
         <div class="user__table">
-          <div class="table__header">
-            <div>ID</div>
-            <div>Name</div>
-            <div>Email</div>
-            <div>Password</div>
-            <div>Action</div>
-          </div>
+          <div>ID</div>
+          <div>Name</div>
+          <div>Email</div>
+          <div>Password</div>
+          <div>Action</div>
         </div>
         {listUserPage?.length > 0 &&
           listUserPage?.map((item, index) => {

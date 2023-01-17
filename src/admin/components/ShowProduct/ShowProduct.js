@@ -13,7 +13,7 @@ const ShowProduct = (props) => {
     props.onEdit(id);
   };
   return (
-    <div class="su__container">
+    <div class="sp__container">
       <div>{props.id}</div>
       <div>{props.title}</div>
       <div>{props.price}</div>

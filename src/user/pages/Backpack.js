@@ -10,7 +10,6 @@ const Backpack = () => {
     setIsLoading(true);
     try {
       const response = await getProducts();
-      console.log(response.data);
       setListProduct(
         response.data.filter((product) => product.category === "Backpack")
       );

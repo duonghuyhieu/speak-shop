@@ -23,37 +23,35 @@ margin: 0 10% 0;
 }
 
 
-.table__header{
+.user__table{
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #000;
     padding: 10px 0;
 }
-.table__header>div {
+.user__table>div {
     width: 10%;
 }
 
-.table__header>div:nth-child(2) {
+.user__table>div:nth-child(2) {
     width: 30%;
 }
 
-.table__header>div:nth-child(3) {
+.user__table>div:nth-child(3) {
     width: 30%;
 }
 
-.table__header>div:nth-child(4) {
+.user__table>div:nth-child(4) {
     width: 20%;
 }
-.table__header>div:nth-child(5) {
+.user__table>div:nth-child(5) {
     width: 10%;
 }
 
-/* Hide the default checkbox */
 input[type="checkbox"] {
     display: none;
 }
 
-/* Create a custom checkbox */
 input[type="checkbox"]+label::before {
     content: "";
     display: inline-block;
@@ -64,7 +62,6 @@ input[type="checkbox"]+label::before {
     border-radius: 2px;
 }
 
-/* Style the checkmark */
 input[type="checkbox"]:checked+label::before {
     content: "";
     background: #3F51B5;
@@ -73,7 +70,6 @@ input[type="checkbox"]:checked+label::before {
     text-align: center;
 }
 
-/* Style the text associated with the checkbox */
 input[type="checkbox"]+label {
     font-size: 14px;
     color: #333;

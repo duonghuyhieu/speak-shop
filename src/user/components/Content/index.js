@@ -33,7 +33,7 @@ const Content = ({ listProduct = [], title, loading }) => {
                             id={item.id}
                             title={item.title}
                             price={item.price}
-                            img={item.images[1]}
+                            img={item.images[0]}
                           />
                         </Col>
                       );

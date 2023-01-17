@@ -1,4 +1,28 @@
-.img{
-    max-height: 300px;
-    background-size: cover;
+.sp__container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+.sp__container>div {
+    width: 10%;
+}
+
+.sp__container>div:nth-child(2) {
+    width: 40%;
+}
+
+.sp__container>div:nth-child(3) {
+    width: 20%;
+}
+
+.sp__container>div:nth-child(4) {
+    width: 20%;
+}
+
+.sp__container>div:nth-child(5) {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
 }

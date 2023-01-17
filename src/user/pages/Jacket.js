@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Content from "../components/Content";
 import { getProducts } from "../services/product-service";
 
-const Clothes = () => {
+const Jacket = () => {
   const [listProduct, setListProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const handleGetProduct = async () => {
@@ -24,7 +24,7 @@ const Clothes = () => {
   }, []);
 
   return (
-    <Content loading={isLoading} listProduct={listProduct} title="Clothes" />
+    <Content loading={isLoading} listProduct={listProduct} title="Jacket" />
   );
 };
-export default Clothes;
+export default Jacket;

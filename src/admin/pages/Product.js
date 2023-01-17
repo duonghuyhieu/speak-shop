@@ -56,7 +56,7 @@ function Product() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div class="product__container">
+    <div class="user__container">
       <Modal
         visible={showAddProduct}
         onCloseModal={() => setShowAddProduct(false)}>
@@ -70,13 +70,13 @@ function Product() {
         />
       </Modal>
 
-      <div class="product__title">
+      <div class="user__title">
         <h1>Product</h1>
         <button onClick={handleAddProduct} class="custom-button">
           Add Product
         </button>
       </div>
-      <div class="product__table__feature right__side">
+      <div class="user__table__feature right__side">
         <p>Product per page : </p>
         <div>
           <input
@@ -99,13 +99,11 @@ function Product() {
 
       <div>
         <div class="product__table">
-          <div class="table__header">
-            <div>ID</div>
-            <div>Title</div>
-            <div>Price</div>
-            <div>Category</div>
-            <div>Action</div>
-          </div>
+          <div>ID</div>
+          <div>Title</div>
+          <div>Price</div>
+          <div>Category</div>
+          <div>Action</div>
         </div>
         {listProductPage?.length > 0 &&
           listProductPage?.map((item, index) => {

@@ -7,7 +7,7 @@ import { AdminLayout } from "./admin/layout";
 import User from "./admin/pages/User";
 import Product from "./admin/pages/Product";
 import Home from "./user/pages/Home";
-import Clothes from "./user/pages/Clothes";
+import Jacket from "./user/pages/Jacket";
 import Backpack from "./user/pages/Backpack";
 import Slingbag from "./user/pages/Slingbag";
 import Cap from "./user/pages/Cap";
@@ -37,8 +37,8 @@ function App() {
           />
           <Route
             exact
-            path="/clothes"
-            element={<DefaultLayout children={<Clothes />} />}
+            path="/jacket"
+            element={<DefaultLayout children={<Jacket />} />}
           />
           <Route
             exact

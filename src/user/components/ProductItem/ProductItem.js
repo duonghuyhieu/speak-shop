@@ -23,9 +23,8 @@ const ProductItem = (props) => {
         onClick={() => handelNavigateToDetailPage(props.id)}
       />
       <div className="PI__info">
-        <h2 className="PI__info-title">{props.title}</h2>
         <div className="PI__info-action">
-          <p className="PI__info-price">{props.price}$</p>
+          <p className="PI__info-price">{props.price} $</p>
           <span
             onClick={() => {
               handleAddProductInCart({ ...props, quantity: 1 });

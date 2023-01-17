@@ -4,8 +4,8 @@ export const menuSideBar = [
     link: "/",
   },
   {
-    label: "Clothes",
-    link: "/clothes",
+    label: "Jacket",
+    link: "/jacket",
   },
   {
     label: "Backpack",
@@ -24,30 +24,3 @@ export const menuSideBar = [
     link: "/belt",
   },
 ];
-
-// const test = [
-//   {
-//     icon: "user",
-//     action: "action",
-//   },
-//   {
-//     icon: "user",
-//     action: "action",
-//   },
-//   {
-//     icon: "user",
-//     action: "action",
-//   },
-//   {
-//     icon: "user",
-//     action: "action",
-//   },
-// ];
-
-export const idTypeProduct = {
-  CLOTHES: 1,
-  BACKPACK: 2,
-  FURNITURE: 3,
-  SHOES: 4,
-  OTHERS: 5,
-};

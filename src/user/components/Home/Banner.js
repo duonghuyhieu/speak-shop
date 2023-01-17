@@ -13,7 +13,7 @@ function Banner() {
       <Container>
         <Row>
           <Col sm={0} lg={6}>
-            <Link to="/clothes">
+            <Link to="/jacket">
               <img
                 className="Banner_image"
                 src={BannerImages.clothes}

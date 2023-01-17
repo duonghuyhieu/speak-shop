@@ -1,13 +1,18 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
+import ProductItem from "../ProductItem/ProductItem";
 import { ACTIONS, AppContext } from "../../store";
 import { Loading } from "../Loading";
-
+import { Container, Row, Col } from "react-bootstrap";
 import "./DetailProduct.css";
 
-const DetailProduct = ({ data, title, loading, idProduct }) => {
-  const [indexImage, setIndexImage] = useState(0);
+const DetailProduct = ({
+  data,
+  listProduct = [],
+  title,
+  loading,
+  idProduct,
+}) => {
   const { state, dispatch } = useContext(AppContext);
   const navigate = useNavigate();
   const handleNavigateCategory = (categoryName) => {
@@ -25,30 +30,13 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
       },
     });
   };
+  let filteredArr = listProduct.filter(function (element) {
+    return element.id !== idProduct;
+  });
 
   console.log(state);
-  console.log(data);
-  const handleNextImage = () => {
-    setIndexImage((prev) => {
-      if (prev === data?.images?.length - 1) {
-        return 0;
-      } else {
-        return prev + 1;
-      }
-    });
-  };
-
-  const handlePreventImage = () => {
-    setIndexImage((prev) => {
-      if (prev === 0) {
-        return data?.images?.length - 1;
-      } else {
-        return prev - 1;
-      }
-    });
-  };
   return (
-    <>
+    <div className="DetailProduct__container">
       {loading ? (
         <div className="DetailProduct__loading">
           <h3 className="DetailProduct__title">{title}</h3>
@@ -58,26 +46,14 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
         <>
           <h3 className="DetailProduct__title">{title}</h3>
           <div className="DetailProduct">
-            <div
+            <img
               className="DetailProduct__images"
-              style={{
-                backgroundImage: `url(${data?.images[indexImage].URLImg})`,
-              }}>
-              <div className="DetailProduct__images-action">
-                <i
-                  onClick={handlePreventImage}
-                  className="fa-solid fa-angle-left"></i>
-                <i
-                  onClick={handleNextImage}
-                  className="fa-solid fa-angle-right"></i>
-              </div>
-            </div>
+              src={data?.images[0].URLImg}
+              alt=""></img>
 
             <div className="DetailProduct__info">
               <div className="DetailProduct__info-title">{data?.title}</div>
-              <div className="DetailProduct__info-price">
-                Price: {data?.price}
-              </div>
+              <div className="DetailProduct__info-price">{data?.price} $</div>
               <div className="DetailProduct__info-description">
                 {data?.description}
               </div>
@@ -92,11 +68,49 @@ const DetailProduct = ({ data, title, loading, idProduct }) => {
                 Add to cart
                 <i className="fa-solid fa-cart-plus"></i>
               </button>
+              <p>
+                <strong>» PRODUCT WARRANTY 90 DAYS</strong>
+              </p>
+              <p>
+                <strong>» EXCHANGE WITHIN 30 DAYS</strong>
+              </p>
+              <p>
+                <strong>» SALES HOTLINE 1900 999 931</strong>
+              </p>
             </div>
+          </div>
+          <div className="DetailProduct__description">
+            <h4 className="DetailProduct__h4">Description</h4>
+            {data?.images.length > 1 &&
+              data?.images.slice(1).map((item, index) => {
+                return <img src={item.URLImg} alt=""></img>;
+              })}
+          </div>
+          <div className="DetailProduct__space"></div>
+          <div className="DetailProduct__suggeted">
+            <h4 className="DetailProduct__h4">PRODUCTS SAME CATEGORY</h4>
+            <Container>
+              <Row>
+                {filteredArr?.length > 0 &&
+                  // eslint-disable-next-line array-callback-return
+                  filteredArr?.slice(0, 4).map((item, index) => {
+                    return (
+                      <Col sm={6} md={4} xl={3} key={index}>
+                        <ProductItem
+                          id={item.id}
+                          title={item.title}
+                          price={item.price}
+                          img={item.images[0]}
+                        />
+                      </Col>
+                    );
+                  })}
+              </Row>
+            </Container>
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 
