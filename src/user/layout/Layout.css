@@ -1,5 +1,5 @@
 .DefaultLayout__content {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100vh;
 }
 .Navbar {

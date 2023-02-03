@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, useFieldArray, useWatch } from "react-hook-form";
-import { addProduct, editProduct } from "../../services/product-service";
+import { addProduct, editProduct } from "../../../services/product-service";
 
 import "./ProductForm.css";
 
@@ -188,11 +188,14 @@ function ProductForm(props) {
           </div>
 
           <div class="form__button-container ">
-            <button type="submit" disabled={isSubmitting} class="form__button">
-              Submit
-            </button>
             <button type="button" onClick={closeForm} class="form__button">
               Close
+            </button>
+            <button
+              type="submit"
+              class="form__button submit__button"
+              disabled={isSubmitting}>
+              Submit
             </button>
           </div>
         </form>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import UserForm from "../components/UserForm/UserForm";
 import ShowUser from "../components/ShowUser/ShowUser";
-import { getUsers } from "../services/user-service";
+import { getUsers } from "../../services/user-service";
 import Modal from "../../user/components/Modal";
 import "./User.css";
 function User() {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Content from "../components/Content";
-import { getProducts } from "../services/product-service";
+import { getProducts } from "../../services/product-service";
 
 const Cap = () => {
   const [listProduct, setListProduct] = useState([]);

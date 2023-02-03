@@ -38,3 +38,7 @@ export const editProduct = async (title, price, images, category, id) => {
     console.error(error);
   }
 };
+export const getProductById = async (id) => {
+  const response = await ApiClient.get(`/product/${id}`);
+  return response;
+};

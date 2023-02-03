@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteUser } from "../../services/user-service";
+import { deleteUser } from "../../../services/user-service";
 import "./ShowUser.css";
 
 const ShowUser = (props) => {

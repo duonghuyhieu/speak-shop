@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
-
+import { NavLink, useLocation } from "react-router-dom";
+import { isLoggedIn } from "../../../services/authentication";
 import { AppContext } from "../../store";
 import { menuSideBar } from "../../constants";
 import Cart from "../Cart";
@@ -12,17 +12,23 @@ const Sidebar = () => {
   const { pathname } = useLocation();
   const { state } = useContext(AppContext);
   const [visibleModalCart, setVisibleModalCart] = useState(false);
+
+  const handleLogin = () => {
+    if (isLoggedIn()) {
+      window.location = "http://localhost:3000/admin/product";
+    } else {
+      window.location = "http://localhost:3000/login";
+    }
+  };
   return (
     <div className="Sidebar__container">
       <div className="Sidebar__content">
-        <Link to="/admin/user" className="Content__name">
-          <h1 className="Sidebar__shopName">
-            {" "}
-            Speak <br /> Shop{" "}
-          </h1>
-        </Link>
+        <h1 className="Sidebar__shopName">
+          Speak <br /> Shop
+        </h1>
         <div className="Sidebar__extra">
-          <i className="fa-regular fa-circle-user"></i>
+          <i className="fa-regular fa-circle-user" onClick={handleLogin}></i>
+
           <i className="fa-solid fa-magnifying-glass"></i>
           <i className="fa-regular fa-heart"></i>
           <Cart

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductForm from "../components/ProductForm/ProductForm";
 import ShowProduct from "../components/ShowProduct/ShowProduct";
-import { getProducts } from "../services/product-service";
+import { getProducts } from "../../services/product-service";
 import Modal from "../../user/components/Modal";
 import "./Product.css";
 function Product() {

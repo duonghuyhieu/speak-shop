@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Store, AppContext } from "./user/store";
 import { DefaultLayout } from "./user/layout";
 import { AdminLayout } from "./admin/layout";
+import Login from "./auth/pages/Login";
 import User from "./admin/pages/User";
 import Product from "./admin/pages/Product";
 import Home from "./user/pages/Home";
@@ -25,6 +26,7 @@ function App() {
             path="/"
             element={<DefaultLayout children={<Home />} />}
           />
+          <Route exact path="/login" element={<Login />} />
           <Route
             exact
             path="/admin/user"

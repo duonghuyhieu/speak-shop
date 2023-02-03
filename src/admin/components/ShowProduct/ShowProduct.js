@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteProduct } from "../../services/product-service";
+import { deleteProduct } from "../../../services/product-service";
 import "./ShowProduct.css";
 
 const ShowProduct = (props) => {

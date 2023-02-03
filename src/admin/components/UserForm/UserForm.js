@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { addUser, editUser } from "../../services/user-service";
+import { addUser, editUser } from "../../../services/user-service";
 
 import "./UserForm.css";
 
@@ -104,11 +104,14 @@ function UserForm(props) {
             )}
           </div>
           <div class="form__button-container ">
-            <button type="submit" disabled={isSubmitting} class="form__button">
-              Submit
-            </button>
-            <button type="button" onClick={props.onClose} class="form__button">
+            <button type="button" onClick={props.onClose} class="form__button ">
               Close
+            </button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              class="form__button submit__button">
+              Submit
             </button>
           </div>
         </form>
