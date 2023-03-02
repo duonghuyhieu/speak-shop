@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext, ACTIONS } from "../../store";
-import "./ProductItem.css";
+import "./ProductItem.scss";
 
 const ProductItem = (props) => {
   const navigate = useNavigate();

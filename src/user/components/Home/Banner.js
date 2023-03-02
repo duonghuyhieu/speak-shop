@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Banner as BannerImages } from "../../../assets";
 
-import "./Banner.css";
+import "./Banner.scss";
 
 function Banner() {
   return (
@@ -17,7 +17,8 @@ function Banner() {
               <img
                 className="Banner_image"
                 src={BannerImages.clothes}
-                alt=""></img>
+                alt=""
+              ></img>
             </Link>
           </Col>
 
@@ -28,13 +29,15 @@ function Banner() {
                   <img
                     className="Banner_image"
                     src={BannerImages.backpack}
-                    alt=""></img>
+                    alt=""
+                  ></img>
                 </Link>
                 <Link to="/cap">
                   <img
                     className="Banner_image"
                     src={BannerImages.cap}
-                    alt=""></img>
+                    alt=""
+                  ></img>
                 </Link>
               </Col>
               <Col>
@@ -42,13 +45,15 @@ function Banner() {
                   <img
                     className="Banner_image"
                     src={BannerImages.slingbag}
-                    alt=""></img>
+                    alt=""
+                  ></img>
                 </Link>
                 <Link to="/belt">
                   <img
                     className="Banner_image"
                     src={BannerImages.belt}
-                    alt=""></img>
+                    alt=""
+                  ></img>
                 </Link>
               </Col>
             </Row>

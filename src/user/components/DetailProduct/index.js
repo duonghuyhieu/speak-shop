@@ -4,7 +4,7 @@ import ProductItem from "../ProductItem/ProductItem";
 import { ACTIONS, AppContext } from "../../store";
 import { Loading } from "../Loading";
 import { Container, Row, Col } from "react-bootstrap";
-import "./DetailProduct.css";
+import "./DetailProduct.scss";
 
 const DetailProduct = ({
   data,
@@ -49,7 +49,8 @@ const DetailProduct = ({
             <img
               className="DetailProduct__images"
               src={data?.images[0].URLImg}
-              alt=""></img>
+              alt=""
+            ></img>
 
             <div className="DetailProduct__info">
               <div className="DetailProduct__info-title">{data?.title}</div>
@@ -59,12 +60,14 @@ const DetailProduct = ({
               </div>
               <div
                 onClick={() => handleNavigateCategory(data?.category)}
-                className="DetailProduct__info-category">
+                className="DetailProduct__info-category"
+              >
                 Category: {data?.category}
               </div>
               <button
                 onClick={handleAddProductInCart}
-                className="DetailProduct__button">
+                className="DetailProduct__button"
+              >
                 Add to cart
                 <i className="fa-solid fa-cart-plus"></i>
               </button>
@@ -87,7 +90,7 @@ const DetailProduct = ({
               })}
           </div>
           <div className="DetailProduct__space"></div>
-          <div className="DetailProduct__suggeted">
+          <div className="DetailProduct__suggested">
             <h4 className="DetailProduct__h4">PRODUCTS SAME CATEGORY</h4>
             <Container>
               <Row>

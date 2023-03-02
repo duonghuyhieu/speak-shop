@@ -14,7 +14,7 @@ import Slingbag from "./user/pages/Slingbag";
 import Cap from "./user/pages/Cap";
 import Belt from "./user/pages/Belt";
 import DetailProductPage from "./user/pages/DetailProduct";
-import "./App.css";
+import "./App.scss";
 function App() {
   const { state, dispatch } = Store();
   return (

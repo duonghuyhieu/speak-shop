@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Loading } from "../Loading";
 import ProductItem from "../ProductItem/ProductItem";
-import "./Content.css";
+import "./Content.scss";
 
 const Content = ({ listProduct = [], title, loading }) => {
   return (

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import UserForm from "../components/UserForm/UserForm";
-import ShowUser from "../components/ShowUser/ShowUser";
+import ShowUser from "../components/UserList/UserList";
 import { getUsers } from "../../services/user-service";
 import Modal from "../../user/components/Modal";
-import "./User.css";
+import "./User.scss";
 function User() {
   const [listUser, setListUser] = useState([]);
   const [showAddUser, setShowAddUser] = useState(false);
@@ -65,13 +65,13 @@ function User() {
       </Modal>
 
       <div class="user__title">
-        <h1>User</h1>
+        <h1>Admin</h1>
         <button onClick={handleAddUser} class="custom-button">
-          Add User
+          Add Admin
         </button>
       </div>
       <div class="user__table__feature right__side">
-        <p>User per page : </p>
+        <p>Admin per page : </p>
         <div>
           <input
             type="checkbox"
@@ -109,7 +109,8 @@ function User() {
                 lastName={item.lastName}
                 email={item.email}
                 password={item.password}
-                onEdit={handleEditUser}></ShowUser>
+                onEdit={handleEditUser}
+              ></ShowUser>
             );
           })}
       </div>
@@ -117,9 +118,8 @@ function User() {
         {pageNumbers.map((number) => (
           <button
             onClick={() => handleChangePage(number)}
-            className={`number__page ${
-              currentPage === number ? "active" : ""
-            }`}>
+            className={`number__page ${currentPage === number ? "active" : ""}`}
+          >
             {number}
           </button>
         ))}

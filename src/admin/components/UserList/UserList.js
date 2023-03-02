@@ -1,6 +1,6 @@
 import React from "react";
 import { deleteUser } from "../../../services/user-service";
-import "./ShowUser.css";
+import "./UserList.scss";
 
 const ShowUser = (props) => {
   const onDelete = async (id) => {
@@ -23,11 +23,13 @@ const ShowUser = (props) => {
         <i
           type="button"
           onClick={() => onDelete(props.id)}
-          class="fa-solid fa-trash"></i>
+          class="fa-solid fa-trash"
+        ></i>
         <i
           type="button"
           onClick={() => handleEdit(props.id)}
-          class="fa-solid fa-pen"></i>
+          class="fa-solid fa-pen"
+        ></i>
       </div>
     </div>
   );

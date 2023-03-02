@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { isLoggedIn } from "../../../services/authentication";
 import { AppContext } from "../../store";
 import { menuSideBar } from "../../constants";
 import Cart from "../Cart";
 import Modal from "../../components/Modal";
-import "./Sidebar.css";
+import "./Sidebar.scss";
 import ModalCart from "../ModalCart";
 
 const Sidebar = () => {
@@ -23,9 +23,12 @@ const Sidebar = () => {
   return (
     <div className="Sidebar__container">
       <div className="Sidebar__content">
-        <h1 className="Sidebar__shopName">
-          Speak <br /> Shop
-        </h1>
+        <Link to="/" className="Content__name">
+          <h1 className="Sidebar__shopName">
+            {" "}
+            Speak <br /> Shop{" "}
+          </h1>
+        </Link>
         <div className="Sidebar__extra">
           <i className="fa-regular fa-circle-user" onClick={handleLogin}></i>
 
@@ -42,8 +45,9 @@ const Sidebar = () => {
               key={index}
               to={menu.link}
               className={`Nav__links ${
-                menu.link === pathname ? "Nav__link-selected" : ""
-              }`}>
+                menu.link === pathname ? "Nav__links-selected" : ""
+              }`}
+            >
               {menu.label}
             </NavLink>
           ))}
@@ -64,7 +68,8 @@ const Sidebar = () => {
 
       <Modal
         visible={visibleModalCart}
-        onCloseModal={() => setVisibleModalCart(false)}>
+        onCloseModal={() => setVisibleModalCart(false)}
+      >
         <ModalCart onCloseModal={() => setVisibleModalCart(false)} />
       </Modal>
     </div>

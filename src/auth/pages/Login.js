@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { checkAccount } from "../../services/authentication";
-import "./Login.css";
+import "./Login.scss";
 function Login() {
   const {
     register,
@@ -11,7 +11,7 @@ function Login() {
     reset,
   } = useForm();
 
-  const [unvalidate, setUnvalidate] = useState("");
+  const [invalidate, setInvalidate] = useState("");
 
   const onSubmit = async (data) => {
     const response = await checkAccount(data.gmail, data.password);
@@ -20,7 +20,7 @@ function Login() {
     if (response) {
       window.location = "http://localhost:3000/admin/product";
     } else {
-      setUnvalidate("Wrong password or email");
+      setInvalidate("Wrong password or email");
     }
 
     reset();
@@ -74,13 +74,14 @@ function Login() {
             {errors.password && (
               <p class="form__error">Please check the Password</p>
             )}
-            {unvalidate && <p class="form__error">{unvalidate}</p>}
+            {invalidate && <p class="form__error">{invalidate}</p>}
           </div>
           <p className="forgetpass">Forget password</p>
           <button
             type="submit"
             disabled={isSubmitting}
-            className="login__button">
+            className="login__button"
+          >
             Login
           </button>
         </form>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Slice } from "../../../assets";
-import "./Slideshow.css";
+import "./Slideshow.scss";
 const slides = [Slice.slice1, Slice.slice2, Slice.slice3];
 const Slideshow = () => {
   const [index, setIndex] = useState(0);

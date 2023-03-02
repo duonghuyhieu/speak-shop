@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { addUser, editUser } from "../../../services/user-service";
 
-import "./UserForm.css";
+import "./UserForm.scss";
 
 function UserForm(props) {
   const {
@@ -110,7 +110,8 @@ function UserForm(props) {
             <button
               type="submit"
               disabled={isSubmitting}
-              class="form__button submit__button">
+              class="form__button submit__button"
+            >
               Submit
             </button>
           </div>

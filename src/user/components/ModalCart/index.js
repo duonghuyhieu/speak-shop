@@ -4,7 +4,7 @@ import { Animate } from "react-simple-animate";
 import { AppContext } from "../../store";
 import CartItem from "./CartItem";
 
-import "./ModalCart.css";
+import "./ModalCart.scss";
 
 const ModalCart = ({ onCloseModal }) => {
   const { cart } = useContext(AppContext).state;

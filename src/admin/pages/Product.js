@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ProductForm from "../components/ProductForm/ProductForm";
-import ShowProduct from "../components/ShowProduct/ShowProduct";
+import ProductList from "../components/ProductList/ProductList";
 import { getProducts } from "../../services/product-service";
 import Modal from "../../user/components/Modal";
-import "./Product.css";
+import "./Product.scss";
 function Product() {
   const [listProduct, setListProduct] = useState([]);
   const [showAddProduct, setShowAddProduct] = useState(false);
@@ -59,7 +59,8 @@ function Product() {
     <div class="user__container">
       <Modal
         visible={showAddProduct}
-        onCloseModal={() => setShowAddProduct(false)}>
+        onCloseModal={() => setShowAddProduct(false)}
+      >
         <ProductForm
           onGetProduct={handleGetProduct}
           show={showAddProduct}
@@ -108,14 +109,15 @@ function Product() {
         {listProductPage?.length > 0 &&
           listProductPage?.map((item, index) => {
             return (
-              <ShowProduct
+              <ProductList
                 onGetProduct={handleGetProduct}
                 id={item.id}
                 title={item.title}
                 images={item.images}
                 category={item.category}
                 price={item.price}
-                onEdit={handleEditProduct}></ShowProduct>
+                onEdit={handleEditProduct}
+              ></ProductList>
             );
           })}
       </div>
@@ -123,9 +125,8 @@ function Product() {
         {pageNumbers.map((number) => (
           <button
             onClick={() => handleChangePage(number)}
-            className={`number__page ${
-              currentPage === number ? "active" : ""
-            }`}>
+            className={`number__page ${currentPage === number ? "active" : ""}`}
+          >
             {number}
           </button>
         ))}

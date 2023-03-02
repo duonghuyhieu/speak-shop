@@ -1,4 +1,4 @@
-import "./Modal.css";
+import "./Modal.scss";
 
 const Modal = ({ children, visible = true, onCloseModal }) => {
   return (

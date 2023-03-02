@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, useFieldArray, useWatch } from "react-hook-form";
 import { addProduct, editProduct } from "../../../services/product-service";
 
-import "./ProductForm.css";
+import "./ProductForm.scss";
 
 const fieldArrayName = "images";
 
@@ -19,7 +19,8 @@ const Display = ({ control, index }) => {
         style={{
           minHeight: "200px",
           backgroundImage: `url(${data?.URLImg})`,
-        }}></div>
+        }}
+      ></div>
     </div>
   );
 };
@@ -50,7 +51,8 @@ const Edit = ({ update, index, value, control }) => {
           onClick={handleSubmit((data) => {
             update(index, data);
             console.log(index, data);
-          })}>
+          })}
+        >
           Submit
         </button>
       </div>
@@ -147,7 +149,8 @@ function ProductForm(props) {
                   <i
                     class="fa-solid fa-xmark right__side"
                     type="button"
-                    onClick={() => remove(index)}></i>
+                    onClick={() => remove(index)}
+                  ></i>
                   <Edit
                     control={control}
                     update={update}
@@ -166,8 +169,9 @@ function ProductForm(props) {
               append({
                 URLImg: "",
               });
-            }}>
-            append
+            }}
+          >
+            more
           </button>
 
           <div class="au__form">
@@ -178,7 +182,8 @@ function ProductForm(props) {
               type="category"
               {...register("category", {
                 required: true,
-              })}>
+              })}
+            >
               <option value="Jacket">Jacket</option>
               <option value="Backpack">Backpack</option>
               <option value="Sling Bag">Sling Bag</option>
@@ -194,7 +199,8 @@ function ProductForm(props) {
             <button
               type="submit"
               class="form__button submit__button"
-              disabled={isSubmitting}>
+              disabled={isSubmitting}
+            >
               Submit
             </button>
           </div>

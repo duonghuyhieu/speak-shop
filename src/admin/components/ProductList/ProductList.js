@@ -1,6 +1,6 @@
 import React from "react";
 import { deleteProduct } from "../../../services/product-service";
-import "./ShowProduct.css";
+import "./ProductList.scss";
 
 const ShowProduct = (props) => {
   const onDelete = async (id) => {
@@ -22,11 +22,13 @@ const ShowProduct = (props) => {
         <i
           type="button"
           onClick={() => onDelete(props.id)}
-          class="fa-solid fa-trash"></i>
+          class="fa-solid fa-trash"
+        ></i>
         <i
           type="button"
           onClick={() => handleEdit(props.id)}
-          class="fa-solid fa-pen"></i>
+          class="fa-solid fa-pen"
+        ></i>
       </div>
     </div>
   );

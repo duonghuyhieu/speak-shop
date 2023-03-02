@@ -1,5 +1,5 @@
 import { memo } from "react";
-import "./cart.css";
+import "./cart.scss";
 
 const Cart = ({ totalProduct, onClick }) => {
   return (

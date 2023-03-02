@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Sidebar from "../components/Layout/Sidebar";
 import Footer from "../components/Layout/Footer";
 
-import "./Layout.css";
+import "./Layout.scss";
 
 const DefaultLayout = ({ children }) => {
   return (
